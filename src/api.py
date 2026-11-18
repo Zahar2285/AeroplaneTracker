@@ -109,7 +109,9 @@ class AeroplanesAPI(BaseAPI):
             return aeroplanes
 
         except requests.RequestException as error:
-            raise ConnectionError(
-                "Не удалось получить информацию о самолётах"
-            ) from error
 
+            raise ConnectionError(
+
+                f"Не удалось получить информацию о самолётах: {error}"
+
+            ) from error

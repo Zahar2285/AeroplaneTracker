@@ -49,7 +49,7 @@ def user_interaction() -> None:
             print(
                 f"{plane.callsign} | "
                 f"{plane.origin_country} | "
-                f"Высота: {plane.altitude} м | "
+                f"Высота: {plane.altitude if plane.altitude is not None else 'нет данных'} м | "
                 f"Скорость: {plane.velocity} м/с"
             )
 
@@ -72,7 +72,7 @@ def user_interaction() -> None:
             print(
                 f"{plane.callsign} | "
                 f"{plane.origin_country} | "
-                f"Высота: {plane.altitude} м"
+                f"Высота: {plane.altitude if plane.altitude is not None else 'нет данных'} м | "
             )
 
 
