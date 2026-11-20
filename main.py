@@ -1,6 +1,6 @@
 
-from src.api import AeroplanesAPI
 from src.aeroplane import Aeroplane
+from src.api import AeroplanesAPI
 from src.file_saver import JSONSaver
 from src.utils import filter_by_country, get_top_n
 
@@ -78,4 +78,3 @@ def user_interaction() -> None:
 
 if __name__ == "__main__":
     user_interaction()
-

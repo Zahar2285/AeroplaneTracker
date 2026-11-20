@@ -32,7 +32,7 @@ class AeroplanesAPI(BaseAPI):
     def get_country_coordinates(self, country: str) -> list[float]:
         """Получает границы страны из Nominatim."""
 
-        params = {
+        params: dict[str, str | int] = {
             "country": country,
             "format": "json",
             "limit": 1,
@@ -69,7 +69,7 @@ class AeroplanesAPI(BaseAPI):
 
         south, north, west, east = self.get_country_coordinates(country)
 
-        params = {
+        params: dict[str, float] = {
             "lamin": south,
             "lamax": north,
             "lomin": west,
@@ -90,7 +90,6 @@ class AeroplanesAPI(BaseAPI):
 
             for state in states:
                 if len(state) < 12:
-                    continue
                     continue
 
                 aeroplanes.append({

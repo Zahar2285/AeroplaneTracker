@@ -39,4 +39,3 @@ def get_top_n(
         raise ValueError("Количество самолётов не может быть отрицательным")
 
     return sort_by_altitude(aeroplanes)[:n]
-

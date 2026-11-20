@@ -1,6 +1,9 @@
-
+import json
 from abc import ABC, abstractmethod
+from pathlib import Path
 from typing import Any
+
+from src.aeroplane import Aeroplane
 
 
 class BaseSaver(ABC):
@@ -20,12 +23,6 @@ class BaseSaver(ABC):
     def delete_aeroplane(self, aeroplane: Any) -> None:
         """Удаляет самолёт из хранилища."""
         pass
-
-
-import json
-from pathlib import Path
-
-from src.aeroplane import Aeroplane
 
 
 class JSONSaver(BaseSaver):
@@ -92,4 +89,3 @@ class JSONSaver(BaseSaver):
             json.dumps(aeroplanes, ensure_ascii=False, indent=4),
             encoding="utf-8",
         )
-

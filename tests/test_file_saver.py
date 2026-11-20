@@ -50,4 +50,3 @@ def test_json_file_is_valid(tmp_path) -> None:
 
     assert isinstance(data, list)
     assert data[0]["icao24"] == "abc123"
-

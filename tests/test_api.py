@@ -1,5 +1,7 @@
+from unittest.mock import Mock, patch
 
-from unittest.mock import patch, Mock
+import pytest
+import requests
 
 from src.api import AeroplanesAPI
 
@@ -71,10 +73,6 @@ def test_get_aeroplanes() -> None:
     assert result[0]["callsign"] == "UAL1621"
     assert result[0]["velocity"] == 250.0
     assert result[0]["baro_altitude"] == 9000.0
-
-
-import requests
-import pytest
 
 
 def test_nominatim_connection_error() -> None:

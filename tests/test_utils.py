@@ -2,7 +2,7 @@
 import pytest
 
 from src.aeroplane import Aeroplane
-from src.utils import filter_by_country, sort_by_altitude, get_top_n
+from src.utils import filter_by_country, get_top_n, sort_by_altitude
 
 
 @pytest.fixture
@@ -51,4 +51,3 @@ def test_get_top_n_zero(aeroplanes: list[Aeroplane]) -> None:
 def test_get_top_n_negative(aeroplanes: list[Aeroplane]) -> None:
     with pytest.raises(ValueError):
         get_top_n(aeroplanes, -1)
-
